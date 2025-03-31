@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output, output } from '@angular/core';
+import { Component, output, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import type { InvestmentInput } from '../investment-input.model';
 
@@ -10,18 +10,18 @@ import type { InvestmentInput } from '../investment-input.model';
   styleUrl: './user-input.component.css'
 })
 export class UserInputComponent {
-@Output() calculate = new EventEmitter<InvestmentInput>();
-  enteredInitialInvestment = '0'; // property being binded to ngModel. (in the html).
-  enteredAnnualInvestment = '0'; // property being binded to ngModel. (in the html).
-  enteredExpectedReturn = '5'; // property being binded to ngModel. (in the html).
-  enteredDuration = '10'; // property being binded to ngModel. (in the html).
+  calculate = output<InvestmentInput>();
+  enteredInitialInvestment = signal('0'); // property being binded to ngModel WITH SIGNALS. (in the html).
+  enteredAnnualInvestment = signal('0'); // property being binded to ngModel WITH SIGNALS. (in the html).
+  enteredExpectedReturn = signal('5'); // property being binded to ngModel WITH SIGNALS. (in the html).
+  enteredDuration = signal('10'); // property being binded to ngModel WITH SIGNALS. (in the html).
 
   onSubmit() {
     this.calculate.emit({
-      initialInvestment: + this.enteredInitialInvestment,
-      duration: + this.enteredDuration,
-      expectedReturn: + this.enteredExpectedReturn,
-      annualInvestment: + this.enteredAnnualInvestment
+      initialInvestment: + this.enteredInitialInvestment(),
+      duration: + this.enteredDuration(),
+      expectedReturn: + this.enteredExpectedReturn(),
+      annualInvestment: + this.enteredAnnualInvestment()
     }) // emit this no matter what. even if you create it or use the output function.
   }
 }
