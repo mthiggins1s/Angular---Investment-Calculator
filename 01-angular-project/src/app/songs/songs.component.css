@@ -1,0 +1,35 @@
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Reduce gap between image and text */
+    background-color: #696969; /* Dark background like Spotify */
+    color: #fff;
+    border: none;
+    padding: 0.5rem 0.75rem; /* Smaller padding */
+    border-radius: 10px; /* Rounder edges for a more slim look */
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: #1db954; /* Spotify Green */
+  }
+  
+  img {
+    width: 30px; /* Smaller image size */
+    height: 30px; /* Smaller image size */
+    border-radius: 5px;
+    object-fit: cover;
+  }
+  
+  span {
+    font-size: 0.9rem; /* Slightly smaller font size */
+    font-weight: 500;
+  }
+  
