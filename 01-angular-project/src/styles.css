@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Winky+Sans:ital,wght@0,300;1,300&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #181818; /* Dark background for a sleek look */
+    color: #ffffff; /* White text for readability */
+    font-family: "Winky Sans", sans-serif;
+  }
+
+  .text-green {
+    color: #1DB954;
+  }
+
+  .button {
+    background-color: #1DB954;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #17a34a;
+  }
+  
+
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  header img {
+    width: 125px; /* Base size */
+    height: auto;
+    transform: scale(2); /* Increase size without affecting layout */
+  }
+  
+  

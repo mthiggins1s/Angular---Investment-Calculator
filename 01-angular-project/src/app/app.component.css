@@ -1,0 +1,17 @@
+header {
+    background-color: #121212;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 3px solid #1DB954;
+    font-family: "Winky Sans", sans-serif;
+  }
+  
+  h1 {
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0;
+    font-family: "Winky Sans", sans-serif;
+    text-transform: uppercase;
+  }
+  
