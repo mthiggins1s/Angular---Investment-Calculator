@@ -2,34 +2,38 @@ div {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  button {
+}
+
+button {
     display: flex;
     align-items: center;
-    gap: 0.5rem; /* Reduce gap between image and text */
-    background-color: #696969; /* Dark background like Spotify */
+    justify-content: flex-start; /* Align content to the left */
+    gap: 0.5rem; /* Add spacing between the image and text */
+    background-color: #696969;
     color: #fff;
     border: none;
-    padding: 0.5rem 0.75rem; /* Smaller padding */
-    border-radius: 10px; /* Rounder edges for a more slim look */
+    padding: 0.5rem;
+    border-radius: 10px;
     cursor: pointer;
     transition: background 0.2s ease-in-out;
-  }
-  
-  button:hover {
-    background-color: #1db954; /* Spotify Green */
-  }
-  
-  img {
-    width: 30px; /* Smaller image size */
-    height: 30px; /* Smaller image size */
+    width: 200px; /* Set a fixed width */
+    height: 50px; /* Set a fixed height */
+}
+
+button:hover {
+    background-color: #1db954;
+}
+
+img {
+    width: 30px;
+    height: 30px;
     border-radius: 5px;
     object-fit: cover;
-  }
-  
-  span {
-    font-size: 0.9rem; /* Slightly smaller font size */
+    flex-shrink: 0; /* Prevent the image from shrinking */
+}
+
+span {
+    font-size: 0.9rem;
     font-weight: 500;
-  }
-  
+    text-align: left; /* Ensure text aligns properly */
+}
