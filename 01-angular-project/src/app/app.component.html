@@ -1,17 +1,52 @@
 <header>
-  <img
-    src="/assets/transparent_image.png"
-    alt="Music Playlist Image"
-  />
+  <img src="/assets/transparent_image.png" alt="Music Playlist Image" />
 
   <h1>Music Playlist - Angular</h1>
 </header>
 
-
 <main>
   <ul id="songs">
     <li>
-      <app-songs />
+      <app-songs
+        [avatar]="songs[0].avatar"
+        [name]="songs[0].name"
+        [id]="songs[0].id"
+      />
+    </li>
+    <li>
+      <app-songs
+        [avatar]="songs[1].avatar"
+        [name]="songs[1].name"
+        [id]="songs[1].id"
+      />
+    </li>
+    <li>
+      <app-songs
+        [avatar]="songs[2].avatar"
+        [name]="songs[2].name"
+        [id]="songs[2].id"
+      />
+    </li>
+    <li>
+      <app-songs
+        [avatar]="songs[3].avatar"
+        [name]="songs[3].name"
+        [id]="songs[3].id"
+      />
+    </li>
+    <li>
+      <app-songs
+        [avatar]="songs[4].avatar"
+        [name]="songs[4].name"
+        [id]="songs[4].id"
+      />
+    </li>
+    <li>
+      <app-songs
+        [avatar]="songs[5].avatar"
+        [name]="songs[5].name"
+        [id]="songs[5].id"
+      />
     </li>
   </ul>
 </main>
